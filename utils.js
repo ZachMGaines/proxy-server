@@ -14,3 +14,15 @@ export function mungeWeather(weather) {
     };
   });
 }
+
+export function mungeYelp(data) {
+  return data.businesses.map(item => {
+    return {
+      name: item.name,
+      image_url: item.image_url,
+      price: item.price,
+      rating: item.rating,
+      url: item.url
+    };
+  });
+}
